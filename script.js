@@ -129,15 +129,15 @@ function calculateTax(age, income, extraIncome, deductions) {
         switch (age) {
             case "below40":
                 tax = 0.3 * (taxableIncome - 800000);
-                amountLeft = income - tax
+                amountLeft = taxableIncome - tax
                 break;
             case "40to60":
                 tax = 0.4 * (taxableIncome - 800000);
-                amountLeft = income - tax
+                amountLeft = taxableIncome - tax
                 break;
             case "above60":
                 tax = 0.1 * (taxableIncome - 800000);
-                amountLeft = income - tax
+                amountLeft = taxableIncome - tax
                 break;
         }
     }
